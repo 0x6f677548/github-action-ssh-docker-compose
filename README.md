@@ -85,7 +85,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - uses: alex-ac/github-action-ssh-docker-compose@master
+    - uses: 0x6f677548/github-action-ssh-docker-compose@master
       name: Docker-Compose Remote Deployment
       with:
         ssh_host: example.com
@@ -115,7 +115,7 @@ jobs:
     steps:
     - actions/checkout@v2
 
-    - uses: alex-ac/github-action-ssh-docker-compose@master
+    - uses: 0x6f677548/github-action-ssh-docker-compose@master
       name: Docker-Stack Remote Deployment
       with:
         ssh_host: example.com
