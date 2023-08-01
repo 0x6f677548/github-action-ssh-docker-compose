@@ -16,8 +16,8 @@ unknown docker-images. It is entirely built from Dockerfile on top of
  * `ssh_host` - Remote host name.
  * `ssh_port` - Remote port for SSH connection. Default is 22.
  * `ssh_user` - Remote user which should have access to docker.
- * `docker_compose_prefix` - Project name passed to compose. Each docker
-   container will have this prefix in name.
+ * `project_name` - Project name used on directory structure and passed to compose. 
+    Each docker container will have this prefix in name.
  * `docker_compose_filename` - Path to the docker-compose file in the repository.
  * `use_stack` - Use docker stack instead of docker-compose.
  * `tar_package_operation_modifiers` - Modifiers for tar package operation. Default is '--exclude .git --exclude .github'
@@ -91,7 +91,7 @@ jobs:
         ssh_host: example.com
         ssh_private_key: ${{ secrets.EXAMPLE_COM_SSH_PRIVATE_KEY }}
         ssh_user: ${{ secrets.EXAMPLE_COM_SSH_USER }}
-        docker_compose_prefix: example_com
+        project_name: example_com
 ```
 
 8. You're all set!
@@ -121,7 +121,7 @@ jobs:
         ssh_host: example.com
         ssh_private_key: ${{ secrets.EXAMPLE_COM_SSH_PRIVATE_KEY }}
         ssh_user: ${{ secrets.EXAMPLE_COM_SSH_USER }}
-        docker_compose_prefix: example.com
+        project_name: example_com
         use_stack: 'true'
 ```
 

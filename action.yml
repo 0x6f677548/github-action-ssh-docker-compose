@@ -14,8 +14,8 @@ inputs:
   ssh_user:
     description: Remote user name.
     required: true
-  docker_compose_prefix:
-    description: Prefix for docker-compose containers.
+  project_name:
+    description: Project name used on directory structure and for docker-compose containers.
     required: true
   docker_compose_filename:
     description: Docker compose file to use
@@ -35,6 +35,6 @@ runs:
     SSH_PORT: ${{ inputs.ssh_port }}
     SSH_PRIVATE_KEY: ${{ inputs.ssh_private_key }}
     DOCKER_COMPOSE_FILENAME: ${{ inputs.docker_compose_filename }}
-    DOCKER_COMPOSE_PREFIX: ${{ inputs.docker_compose_prefix }}
+    PROJECT_NAME: ${{ inputs.project_name }}
     USE_DOCKER_STACK: ${{ inputs.use_stack }}
     TAR_PACKAGE_OPERATION_MODIFIERS: ${{ inputs.tar_package_operation_modifiers }}
